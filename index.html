@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація на подію</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="welcome-message" class="welcome" hidden></div>
+        
+        <h1>Реєстрація на подію</h1>
+        
+        <form id="reg-form">
+            <div class="form-group">
+                <label for="name">Ім’я:</label>
+                <input type="text" id="name">
+                <span class="error" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email">
+                <span class="error" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Вік:</label>
+                <input type="number" id="age">
+                <span class="error" id="age-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="event">Тип події:</label>
+                <select id="event">
+                    <option value="">-- Виберіть тип події --</option>
+                    <option value="Conference">Конференція</option>
+                    <option value="Workshop">Воркшоп</option>
+                    <option value="Meetup">Мітап</option>
+                </select>
+                <span class="error" id="event-error"></span>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="rules"> Погоджуюсь з правилами
+                </label>
+                <span class="error" id="rules-error"></span>
+            </div>
+
+            <button type="submit" id="register-btn">Register</button>
+        </form>
+
+        <div id="status-message" class="status"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
