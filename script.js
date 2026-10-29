@@ -8,7 +8,7 @@ const registerBtn = document.getElementById('register-btn');
 const statusMessage = document.getElementById('status-message');
 const welcomeMessage = document.getElementById('welcome-message');
 
-// --- 8. Cookie ---
+//8-кукі
 function checkCookie() {
     const cookies = document.cookie.split(';');
     for (let i = 0; i < cookies.length; i++) {
@@ -27,7 +27,7 @@ function setCookie(name, value, days) {
     document.cookie = `${name}=${encodeURIComponent(value)}; max-age=${maxAge}; path=/`;
 }
 
-// --- 6. Promise ---
+//6-проміс
 function sendDataOnServer(userData) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -41,7 +41,7 @@ function sendDataOnServer(userData) {
     });
 }
 
-// --- 2. Обробка форми & 3. Валідація ---
+//2і3-обробка форми і валідація
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -87,7 +87,7 @@ form.addEventListener('submit', (e) => {
         return;
     }
 
-    // --- 4. Формування об’єкта & 5. JSON ---
+    //4і5 - формування об’єкта json
     const userObj = { name, email, age, event };
     const jsonString = JSON.stringify(userObj);
     console.log("JSON рядок:", jsonString);
@@ -95,7 +95,7 @@ form.addEventListener('submit', (e) => {
     const parsedObj = JSON.parse(jsonString);
     console.log("JS-об'єкт після конвертації:", parsedObj);
 
-    // --- 9. Додаткові вимоги & 7. Обробка Promise ---
+    //9і7 - додаткові вимоги і обробка проміс
     registerBtn.disabled = true;
     registerBtn.textContent = 'Loading...';
     statusMessage.textContent = 'Sending data...';
